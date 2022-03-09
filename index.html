@@ -19,6 +19,11 @@
   </head>
 
   <body>
+    <!-- for loader: -->
+    <div class="loader" id="loader">
+      <img src="images/loader.svg" alt="" />
+    </div>
+
     <div class="container">
       <form class="col-md-6 m-auto py-5 form-width">
         <div class="input-group mb-3">
@@ -26,9 +31,12 @@
             type="text"
             class="form-control"
             placeholder="Enter a location for Weather ..."
+            id="search-input"
           />
           <div class="input-group-append">
-            <button type="button" class="btn btn-success">Search</button>
+            <button type="button" class="btn btn-success" id="search-btn">
+              Search
+            </button>
           </div>
         </div>
       </form>
@@ -38,13 +46,15 @@
             <img src="images/bg.svg" alt="" />
           </div>
           <div class="col mt-5">
-            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <img src="" id="weather-icon" alt="" />
+            <h1 id="city"></h1>
+            <h3><span id="city-weather"></span></h3>
+            <h1 class="lead" id="weather-type"></h1>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
